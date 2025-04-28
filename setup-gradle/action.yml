@@ -2,6 +2,11 @@ name: 'Setup Gradle'
 description: 'Configures Gradle for GitHub actions, caching state and generating a dependency graph via Dependency Submission.'
 
 inputs:
+
+  build-root-directory:
+    description: Path to the root directory of the build. Default is the root of the GitHub workspace.
+    required: false
+
   gradle-version:
     description: |
       Gradle version to use. If specified, this Gradle version will be downloaded, added to the PATH and used for invoking Gradle.
